@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Login.css'
 class Login extends React.Component {
     render() { 
-        return <div class="container d-flex align-items-center justify-content-center vh-100">
+        return <div class="container d-flex align-items-center justify-content-center vh-100 containerlogin">
                     <div class="col-md-6 shadow-lg mb-5 bg-white rounded ">
                         <div class="card border">
                             <div class="card-body">

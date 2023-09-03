@@ -1,6 +1,5 @@
-import React,{ useState } from 'react';
-import './App.css';
-import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { BsFillLaptopFill } from "react-icons/bs";
@@ -18,15 +17,15 @@ function App() {
   const options = [
     {
       name: 'Dashboard',
-      icon: <BsFillLaptopFill/>, 
+      icon: <BsFillLaptopFill />,
     },
     {
       name: 'Franchise Dashboard',
-      icon: <BsFillLaptopFill/>,
+      icon: <BsFillLaptopFill />,
     },
     {
       name: 'Add New Contact',
-      icon: <BsFillLaptopFill/>,
+      icon: <BsFillLaptopFill />,
     },
   ];
 
@@ -39,24 +38,24 @@ function App() {
     }
   };
 
-  const handleClick = (email, password) =>{
-      // console.log(email,password);
-      if(email === 'aqibmurtaza9@gmail.com' && password === '123'){
-          setLogin(true);
-      }
+  const handleClick = (email, password) => {
+    // console.log(email,password);
+    if (email === 'aqibmurtaza9@gmail.com' && password === '123') {
+      setLogin(true);
+    }
   };
 
   return (
-        <>
-        <Router>
-            <Routes>
-              <Route path="/"  element={<Login/>}/>
-              <Route element={<Layout/>}>
-              <Route path="/dashboard" element={<Dashboard />} />
-              </Route>
-            </Routes>
-        </Router>
-        </>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<Layout />}>
+            <Route index element={<Dashboard />} />
+          </Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
